@@ -1,0 +1,43 @@
+<ion-menu class="custom" content-id="main-content" type="overlay">
+  <ion-content>
+    <ion-header class="menu_header">
+      <ion-toolbar class="menu_header_toolbar">
+        <div class="profile">
+          <div class="img" (click)="profileClick()" routerLink="profile">
+            <img src="/assets/icon/user-pic.svg" />
+          </div>
+          <div class="details">
+            <span style="font-size: 2vh"> Good {{time}},<br /> </span>
+            <span style="font-size: 3vh; font-weight: 800;"> {{userName}}<br /> </span>
+          </div>
+        </div>
+      </ion-toolbar>
+    </ion-header>
+    <ion-list>
+      <ion-menu-toggle
+        [autoHide]="true"
+        *ngFor="let p of appPages; let i = index"
+      >
+        <ion-item (click)="itemClick(p)" lines="none" detail="false">
+          <ion-label class="style_label">{{ p.title }}</ion-label>
+        </ion-item>
+      </ion-menu-toggle>
+    </ion-list>
+    <div class="bottom">
+      <ion-list>
+        <ion-menu-toggle
+          auto-hide="false"
+          *ngFor="let p of bottomPages; let i = index"
+        >
+          <ion-item (click)="itemClick(p)" lines="none" detail="false">
+            <ion-label style="font-size: 12px; color: #bdbdbd">{{
+              p.title
+            }}</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+      </ion-list>
+    </div>
+  </ion-content>
+</ion-menu>
+
+<ion-router-outlet [animated]="true" id="main-content"> </ion-router-outlet>

@@ -1,0 +1,151 @@
+.main {
+  font-family: Poppins;
+  height: 100%;
+  width: 100%;
+  background-color: #e0e0e0;
+  z-index: 0;
+  .header {
+    height: 25%;
+    position: absolute;
+    top: 0;
+    z-index: 5;
+    width: 100%;
+    background: rgb(255, 255, 255);
+    background: linear-gradient(
+      rgba(255, 255, 255, 1) 0%,
+      rgba(255, 255, 255, 1) 21%,
+      rgba(255, 255, 255, 1) 40%,
+      rgba(255, 255, 255, 0.11528361344537819) 100%
+    );
+    .tooltip {
+      height: 35%;
+      display: flex;
+      justify-content: space-between;
+      background: white;
+      position: relative;
+      align-items: center;
+      width: 100%;
+      .profile {
+        align-self: center;
+        display: flex;
+        margin-right: 0.4rem;
+        height: 100%;
+        img{
+          padding: 0.65rem;
+          height: inherit;
+        }
+      }
+      .logo {
+        width: 100%;
+    height: 60%;
+    text-align: center;
+    position: absolute;
+        .img {
+          // background: red;
+          background: var(--ion-color-primary);
+          mask: url('/assets/icon/Booz.svg') no-repeat center / contain;
+          height: 100%;
+        }
+      }
+    }
+    .balance {
+      display: flex;
+      height: 30%;
+      background: rgb(255, 255, 255);
+      background: linear-gradient(
+        rgba(255, 255, 255, 1) 0%,
+        rgba(255, 255, 255, 1) 21%,
+        rgba(255, 255, 255, 1) 40%,
+        rgba(255, 255, 255, 0.11528361344537819) 100%
+      );
+      align-items: center;
+      padding-left: 5%;
+      .value {
+        display: flex;
+        font-weight: bold;
+        font-size: 24px;
+        .r {
+          align-self: flex-start;
+          font-size: 14px;
+          padding: 2px 4px;
+          color: var(--ion-color-primary-opposite);
+        }
+      }
+    }
+  }
+  .maps {
+    height: calc(100% - 6rem);
+    margin-top: 6rem;
+    img {
+      max-width: unset;
+      height: inherit;
+    }
+  }
+  .scan_button_div {
+    position: absolute;
+    height:8%;
+    bottom: 3%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    .scan_button {
+      width: 60%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50px;
+      background-color: var(--ion-color-primary-opposite);
+      img{
+        height: 32%;
+      }
+      .text_scan{ 
+        font-weight: 600;
+        color: white;
+        font-size: 16px;
+        margin-left: 5%;    
+      }
+    }
+  }
+}
+.scrollOverHead{
+  position: absolute;
+  height: calc(100% - 4rem);
+  top: 4rem;
+  margin-top: unset;
+  width: 6%;
+  z-index: 13;
+}
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (orientation: portrait) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+    .main{
+      .header{
+        .tooltip{
+          ion-buttons{
+            margin-left: 3%;
+            ion-menu-button{
+              font-size: 48px;
+            }
+          }
+        }
+        .balance{
+          .value{
+            font-size: 30px;
+            .r{
+              font-size: 22px;
+            }
+          }
+        }
+      }
+      .scan_button_div{
+        .scan_button{
+          font-size: 26px;
+          .text_scan{
+            font-size: inherit;
+          }
+        }
+      }
+    }
+}

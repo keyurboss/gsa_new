@@ -1,0 +1,32 @@
+<div class="main">
+  <div class="header">
+    <div class="tooltip">
+      <ion-buttons slot="start">
+        <ion-menu-button color="dark"></ion-menu-button>
+      </ion-buttons>
+      <div class="logo">
+        <div class="img"></div>
+      </div>
+      <div class="profile" routerLink="profile">
+        <img src="/assets/icon/user-pic.svg" />
+      </div>
+    </div>
+    <div class="balance">
+      <div class="value">
+        <span class="r">&#x20B9;</span>
+        {{balance}}
+      </div>
+    </div>
+  </div>
+  <div class="maps" id="maps">
+  </div>
+  <div class="scan_button_div" routerLink="/qrcode">
+    <div class="scan_button">
+      <img src="/assets/icon/fingerprint-scan.svg" />
+      <div class="text_scan">Scan to Ride</div>
+    </div>
+  </div>
+  <div class="scrollOverHead maps">
+    
+  </div>
+</div>
