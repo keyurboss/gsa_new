@@ -11,22 +11,34 @@
         <img src="/assets/icon/user-pic.svg" />
       </div>
     </div>
-    <div class="balance">
-      <div class="value">
-        <span class="r">&#x20B9;</span>
-        {{balance}}
-      </div>
-    </div>
   </div>
-  <div class="maps" id="maps">
+  <div class="contant">
+    <ion-card>
+      <ion-card-header class="contant_header">
+        <ion-card-title class="contant_header_title">Card Title</ion-card-title>
+      </ion-card-header>
+  
+      <ion-card-content>
+        <div class="task-list">
+          <div class="daily" *ngIf="TaskList['4']">
+            <div class="header">
+              Daily Task:-
+            </div>
+            <div class="details">
+              {{TaskList['4'].details.display_extra[0].details}}
+            </div>
+          </div>
+          <div class="weekly" *ngIf="TaskList['3']">
+            <div class="header">
+               Weekly Task:-
+            </div>
+            <div class="details">
+              {{TaskList['3'].details.display_extra[0].details}}
+            </div>
+          </div>
+        </div>
+      </ion-card-content>
+    </ion-card>
   </div>
-  <div class="scan_button_div" routerLink="/qrcode">
-    <div class="scan_button">
-      <img src="/assets/icon/fingerprint-scan.svg" />
-      <div class="text_scan">Scan to Ride</div>
-    </div>
-  </div>
-  <div class="scrollOverHead maps">
-    
-  </div>
+  
 </div>

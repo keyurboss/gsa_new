@@ -7,8 +7,10 @@
             <img src="/assets/icon/user-pic.svg" />
           </div>
           <div class="details">
-            <span style="font-size: 2vh"> Good {{time}},<br /> </span>
-            <span style="font-size: 3vh; font-weight: 800;"> {{userName}}<br /> </span>
+            <span style="font-size: 1.6vh"> UNIQUE-ID:TEST1,<br /> </span>
+            <span style="font-size: 2vh">
+              Keyur Shah <br />
+            </span>
           </div>
         </div>
       </ion-toolbar>
@@ -24,18 +26,23 @@
       </ion-menu-toggle>
     </ion-list>
     <div class="bottom">
-      <ion-list>
-        <ion-menu-toggle
-          auto-hide="false"
-          *ngFor="let p of bottomPages; let i = index"
-        >
-          <ion-item (click)="itemClick(p)" lines="none" detail="false">
-            <ion-label style="font-size: 12px; color: #bdbdbd">{{
-              p.title
-            }}</ion-label>
-          </ion-item>
-        </ion-menu-toggle>
-      </ion-list>
+      <ion-title class="bottom_header">Contact Us</ion-title>
+      <div class="profile">
+        <div class="img">
+          <img src="/assets/icon/whatsapp.svg" />
+        </div>
+        <div class="details">
+          <span style="font-size: 2vh"> Whatsapp<br /> </span>
+        </div>
+      </div>
+      <div class="profile">
+        <div class="img">
+          <img src="/assets/icon/call-outline.svg" />
+        </div>
+        <div class="details">
+          <span style="font-size: 2vh"> Call<br /> </span>
+        </div>
+      </div>
     </div>
   </ion-content>
 </ion-menu>

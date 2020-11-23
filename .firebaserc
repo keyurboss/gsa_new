@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "pathshala-9a06d": {
+      "hosting": {
+        "app": [
+          "pathshala-9a06d"
+        ]
+      }
+    }
+  }
+}
